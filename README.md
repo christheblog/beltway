@@ -1,4 +1,4 @@
-# The Beltway Problem
+# The Beltway Reconstruction Problem
 
 Given a list of unordered pairwise distances between points disposed on a circle, we need to find the original order of the points.
 
@@ -17,7 +17,8 @@ We have the following "circle" with 4 points on it. Integers are denoting distan
 		     \          /
 		        -- C -- 	
 		        
-The input of the problem will be given as a list of pairwise distances :
+The input of the problem will be given as a list of pairwise distances (here displayed in order) :
+```
 AB: 3
 AC: 7
 AD: 19
@@ -30,8 +31,9 @@ CB: 20
 DA: 5
 DB: 8
 DC: 12
+```
 
-From this list of unordered pairwise distances, we need to find the original ordering of the points. 
+From the unordered list of pairwise distances, we need to find the original ordering of the points.
 
 
 ## The algorithm
@@ -39,7 +41,7 @@ From this list of unordered pairwise distances, we need to find the original ord
 The algorithm implemented here is just an exponential naive solution that tries all possible combinations using some heuristics to remove a number of non-working solutions.
 
 The algorithm accepts a constraints function that allows us to provide some knowledge about the distances. For instance we can know that the distance between 2 points cannot be more than 1000. 
-This reduces dramatically the search space as we can cut a lot of branches of our search tree at an early stage.  
+This reduces dramatically the search space as we can cut a lot of branches of our search tree at an early stage.
 
 
 ## The Code
@@ -52,5 +54,7 @@ This is used to feed our solving algorithm in the object ```BeltwayApp```, so we
 
 ## Notes
 
-As far as I know, there is no polynomial time algorithm to solve this problem. This problem has some important application in bio-informatics ... so if you discover a polynomial time algorithm, you are welcome to share it :)
+As far as I know, there is no polynomial time algorithm to solve this problem. This problem has some important applications in bioinformatics for DNA sequencing ... so if you discover a polynomial algorithm, you are welcome to share it :)
+
+If you are interested, you can have a look at the following article : (http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.20.6172)
  

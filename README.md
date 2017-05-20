@@ -7,15 +7,15 @@ Given a list of unordered pairwise distances between points disposed on a circle
 
 We have the following "circle" with 4 points on it. Integers are denoting distances between points on the circle.
 
-				-- A -- 
-             /          \		
-            3            5	
-           /              \
-		  B                D
-		   \              /
-		    4           12
-		     \          /
-		        -- C -- 	
+              -- A -- 
+            /         \		
+           3           5	
+          /             \
+          B             D
+          \             /
+           4          12
+            \         /
+              -- C -- 	
 		        
 The input of the problem will be given as a list of pairwise distances (here displayed in order) :
 ```
@@ -40,7 +40,8 @@ From the unordered list of pairwise distances, we need to find the original orde
 
 The algorithm implemented here is just an exponential naive solution that tries all possible combinations using some heuristics to remove a number of non-working solutions.
 
-The algorithm accepts a constraints function that allows us to provide some knowledge about the distances. For instance we can know that the distance between 2 points cannot be more than 1000. 
+The algorithm accepts a constraints function that allows us to provide some knowledge about the distances.<br>
+For instance we can know that the distance between 2 points cannot be more than 1000. 
 This reduces dramatically the search space as we can cut a lot of branches of our search tree at an early stage.
 
 
